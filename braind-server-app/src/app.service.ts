@@ -27,7 +27,7 @@ export class AppService {
     return items;
   }
 
-  public async excecuteRawSql(sqlQuery: string = "SELECT views, guid from sport_products"): Promise<TableDataDto> {
+  public async excecuteRawSql(sqlQuery: string = "SELECT views as цена, guid from sport_products"): Promise<TableDataDto> {
     const items =  await this.dataSource.query(sqlQuery);
     console.log(items)
 
