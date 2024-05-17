@@ -7,7 +7,7 @@ import { DatabaseVectorizeService } from './llama/databse-vectorize.service';
 import { SportProduct } from './entities/sport_product.entitie';
 
 @Module({
-  imports: [TypeOrmModule.forRoot(mySqlConfig),
+  imports: [TypeOrmModule.forRootAsync( {useFactory: () => mySqlConfig}),
     TypeOrmModule.forFeature([SportProduct])
   ],
   controllers: [AppController],

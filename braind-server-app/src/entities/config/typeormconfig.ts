@@ -7,7 +7,7 @@ export const mySqlConfig: TypeOrmModuleOptions = {
     port: 3306,
     username: 'root',
     password: 'root',
-    database: 'test_braind_1',
-    entities: [SportProduct],
+    database: 'braind',
+    entities: ["dist/**/**.entity{.ts,.js}"],
     synchronize: true
 };
